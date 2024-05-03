@@ -22,10 +22,16 @@ terraform {
       source  = "hashicorp/google"
       version = ">= 5.2, < 6"
     }
+    google-beta = {
+      source  = "hashicorp/google-beta"
+      version = ">= 4.64, < 6"
+    }
   }
 
   provider_meta "google" {
     module_name = "blueprints/terraform/terraform-google-address/v3.2.0"
   }
-
+  provider_meta "google-beta" {
+    module_name = "blueprints/terraform/terraform-google-network:vpc/v9.1.0"
+  }
 }
